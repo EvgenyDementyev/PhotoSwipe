@@ -10,7 +10,7 @@
   * @param {Element|NULL} appendToEl
   */
 
-('decode' in new Image());
+// ('decode' in new Image());
 
 /**
  * Check if click or keydown event was dispatched
@@ -229,7 +229,7 @@ function lazyLoadSlide(index, instance) {
 
 function dynamicImportModule(module) {
   // TODO: polyfill import?
-  return import(module);
+  return import(/* webpackIgnore: true */module);
 }
 
 function dynamicImportPlugin(pluginKey, pluginItem) {
